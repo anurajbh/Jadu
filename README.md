@@ -3,5 +3,7 @@ Welcome to Jadu's github page. This is a group created for the Computer as an Ex
 
 Team-
 Grace Halverson
+
 Anuraj Bhatnagar
+
 Katherine Bennett
