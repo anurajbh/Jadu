@@ -12,7 +12,7 @@ void setup()
   strokeCap(SQUARE);
   ellipseMode(CENTER);
   
-  //Not using Loops as color values are rather different and do not follow a pattern in difference.
+  //Not using Loops as color values are rather different and follow an unknown/or non-pattern in variance.
   
   colors[0]=new RandomColor(0,0,0,50);//black
   colors[1]=new RandomColor(0,140,250,70);//blue
@@ -39,12 +39,12 @@ void draw()
       noStroke();
       int i=(int)random(0,5);
       int j=(int)random(0,100);
-      //adding stroke with a probability of appearing 1 in 5 times
+      
       if(j>20)
       {
         colors[i].display();
       }
-      else
+      else//adding stroke with a probability of appearing 1 in 5 times
       {
         stroke(0,50);
       }
@@ -63,12 +63,12 @@ void draw()
       strokes[j].display();
       int i=(int)random((randStrokeWeight.length-1));
       int k=(int)random(0,100);
-      //having a file with a probability of appearing 1 in 5 times
+      
       if(k>20)
       {
         noFill();
       }
-      else
+      else//having a fill with a probability of appearing 1 in 5 times
       {
         fill(127.5, 127.5, 127.5, 30);
       }
@@ -77,7 +77,7 @@ void draw()
       rect(mouseX, mouseY, squareSize, squareSize);
   }
 }
-//DRAWS CIRCLEs WITH RADIUS 100 WHEN MOUSE IS RELEASED IN CASE OF RIGHT MOUSE RELEASE- A
+//DRAWS CIRCLES WITH RADIUS 100 WHEN MOUSE IS RELEASED IN CASE OF RIGHT MOUSE RELEASE
 void mouseReleased()
 {
   noStroke();
@@ -91,11 +91,10 @@ void mouseReleased()
   {
     stroke(0,50);
   }
-  radius=random(100,500);//RANDOMIZING THE CIRCLE SIZE BETWEEN 100 AND 1000 - A
+  radius=random(100,500);//RANDOMIZING THE CIRCLE SIZE BETWEEN 100 AND 500 
   ellipse(mouseX, mouseY, radius, radius);
  }
 //class for random colors
-//PLEASE DO NOT CHANGE ANYTHING BEYOND THIS LINE - A
 class RandomColor
 {
   int r;
